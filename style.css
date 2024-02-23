@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/*---------------------------------------------
+Color setup
+-----------------------------------------------*/
+:root {
+  --primary: #3155e7;
+  --primary-dark: #2045d6;
+  --black: #010101;
+  --gray-1: #788190;
+  --gray-2: #d3d4db;
+  --white: #ffff;
+  --body: #fefefe;
+}
+body {
+  font-family: "plus Jakarta Sans", sans-serif;
+  background-color: var(--body);
+}
+
+/*-------- button--------*/
+.btn {
+  border-radius: 8px;
+}
+.btn-primary,
+.btn-outline-secondary {
+  padding: 12px 20px;
+}
+.btn-primary {
+  background-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+.btn-outline-secondary {
+  color: var(--black);
+  border: 1px solid var(--gray-2);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+}
+.btn-outline-secondary:focus {
+  background-color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+}
+/*-------- navbar --------*/
+.navbar {
+  padding: 20px 0;
+}
+.nav-link {
+  margin-left: 41px;
+  font-size: 16px;
+  color: var(--gray-1);
+  font-weight: bold;
+}
+.active {
+  color: var(--black);
+}
+
+/*---------------------------------------------
+hero section
+-----------------------------------------------*/
+section.hero {
+  padding: 80px 0;
+}
+section.hero .text p {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 73px;
+  color: var(--black);
+}
+.buttons {
+  padding-top: 69px;
+}
+.buttons .btn {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+}
+/*---------------------------------------------
+SetUp section
+-----------------------------------------------*/
+section.setup {
+  padding: 100px 0;
+  background-image: url(img/patternpad.png);
+}
+section.setup .text-header h3 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--black);
+}
+section.setup .text-header p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--gray-1);
+  padding: 27px 0;
+}
+section.setup .icons {
+  padding: 27px 0;
+}
+section.setup h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  padding-bottom: 18px;
+}
+section.setup .desc p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--gray-1);
+  max-width: 284px;
+  margin: 0 auto;
+}
+/*---------------------------------------------
+info section
+-----------------------------------------------*/
+
+section.information .text-information {
+  padding: 134px 0;
+}
+section.information h5 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--black);
+}
+section.information p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray-1);
+  padding-top: 20px;
+}
+section.information .info-1 {
+  padding: 183px 0;
+}
+/*---------------------------------------------
+Footer section
+-----------------------------------------------*/
+footer {
+  padding-top: 279px;
+  margin-bottom: 44px;
+}
+footer a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--black);
+}
+footer .copy {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--gray-1);
+  line-height: 17px;
+  font-weight: 400;
+}
+
+/*-------- Back to top --------*/
+button {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: rgb(0, 0, 0);
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+
+button > div,
+button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+button .clone > *,
+button .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+button .clone > * {
+  transform: translateY(60px);
+}
+
+button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+button svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+button:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/*---------------------------------------------
+responsive section
+-----------------------------------------------*/
+@media (max-width: 576px) {
+
+/*-------- navbar --------*/
+.navbar{
+padding: 20px 0;
+}
+.nav-link{
+    margin-left: 0;
+}
+/*---------------------------------------------
+hero section
+-----------------------------------------------*/
+section.hero img{
+    padding-top: 2.5rem;
+}
+section.hero .text{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 53px;
+
+}
+section.hero,
+section.setup,
+section.information{
+    text-align: center;
+}
+.buttons .btn{
+    display: block;
+    margin: 1rem 0
+}
+.buttons .ms-3{
+    margin-left: 0 !important;
+}
+
+/*---------------------------------------------
+SetUp section
+-----------------------------------------------*/
+section.setup{
+    padding: 50px 0;
+}
+/*---------------------------------------------
+Footer section
+-----------------------------------------------*/
+footer{
+    padding-top: 50px;
+    margin-bottom: 44px;
+}
+}
